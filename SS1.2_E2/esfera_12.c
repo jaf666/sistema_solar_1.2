@@ -8,8 +8,10 @@
 // Funcion para pintar una esfera, sera llamada desde la funcion myEsfera para dibujar cada planeta
 int myEsfera()
 {
-	GLuint indice;
+	static GLuint indice = 0; // Guardo entre llamadas el índice de la lista
+	
 	// GenList genera un indice unico en este caso
+	if (indice == 0){
 	indice = glGenLists(1);
 	glNewList(indice, GL_COMPILE);
 
@@ -3616,7 +3618,7 @@ int myEsfera()
 	glEnd();
 
 	glEndList();
-
+	}
 	return indice;
 
 }

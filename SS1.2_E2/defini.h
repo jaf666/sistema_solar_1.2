@@ -1,3 +1,7 @@
+#include <windows.h>
+#include <glut.h>
+#include <GL/gl.h>
+#include <gl/glu.h>
 // Fichero de definiciones que contiene la estructura que define cada planeta, así como los prototipos
 // de las funciones relacionadas con el movimiento de la cámara y la gestión de las teclas especiales
 
@@ -20,6 +24,18 @@ typedef struct {
 // Ajustar la velocidad con la que se mueven los planetas
 #define MYTIEMPO 41
 #define TELE 0
+
+extern planeta sol;
+extern planeta mercurio;
+extern planeta venus;
+extern planeta tierra;
+extern planeta luna;
+extern planeta iss;
+extern planeta marte;
+extern planeta jupiter;
+extern planeta saturno;
+extern planeta urano;
+extern planeta neptuno;
 
 //////////////////////////////
 // Prototipos de funciones //

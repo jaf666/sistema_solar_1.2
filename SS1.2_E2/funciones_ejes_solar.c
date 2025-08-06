@@ -50,7 +50,7 @@ void myTelescopio(planeta origen, planeta destino) {
 	float destinoPosZ = destino.distancia * sin(destino.angulo_trans * CR);
 
 	// Con gluPerspective se configura la matriz de proyección, ancho dividido por alto
-	gluPerspective(45.0, (float)1000 / (float)1000, 1.0, 9000.0);
+	gluPerspective(45.0, 1.0, 1.0, 9000.0);
 
 	if (strcmp(destino.nombre, "Luna") != 0 && strcmp(destino.nombre, "Iss") != 0) {
 		gluLookAt(
